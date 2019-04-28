@@ -1,0 +1,18 @@
+
+
+      <div class="container formato"  *ngFor="let list of relatorios">
+      
+        <div class="card">  
+        <h5 class="card-header">Relatório de Progresso : {{list.titulo}} </h5>
+          <div class="card-body">
+
+            <h6 class="card-title text-danger">Data : {{list.data | date:'dd/MM/yyyy hh:mm'}}</h6>
+            <p class="card-text text-primary" style="text-align: justify">{{list.progresso}}
+            </p>
+            <p class="text-success">Autor : {{list.autor}}</p>
+            </div>
+          </div> 
+   
+      </div>
+    
+  

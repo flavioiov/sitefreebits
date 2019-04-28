@@ -1,0 +1,27 @@
+<div class="container">
+
+        <div class="row">
+        
+            
+            <div *ngFor="let pic of fotos" class="col-lg-6 col-sm-12 divprincipal">
+                
+                <div class="col-sm-12">
+    
+                
+                    <img class="{{pic.formato}}" [src]="pic.localimg" [alt]="pic.titulo">
+                  
+                
+                  <div class="col-12" style="text-align: left">
+         
+                            <h5 class="titulo">{{pic.titulo}}</h5>
+                            <p class="texto">{{pic.descricao}}</p>
+                            <a routerLink="" class=" texto btn btn-primary"
+                                (click)="openDialog(pic.titulo,pic.descricao,pic.localimg)">Ampliar</a>
+                  </div>
+            </div> 
+        </div>
+    
+    </div>
+    
+    
+    

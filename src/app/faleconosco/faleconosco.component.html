@@ -1,0 +1,91 @@
+<div class="container ">
+  <div class="row">
+  <form [formGroup]="faleconoscoForm" class="col-md-8" (submit)="falarconosco()">
+          <div class="form-group">
+            <input class="form-control" 
+                  formControlName="nome" 
+                  placeholder="nome" 
+                  autofocus>
+                <small
+                *ngIf="faleconoscoForm.get('nome').errors?.required"
+                  class="text-danger d-block mt-2">
+                  Digite seu nome por favor.
+                </small>
+                  
+          </div>
+
+          <div class="form-group">
+              <input class="form-control" 
+                    formControlName="email" 
+                    placeholder="Email" 
+                    autofocus 
+                    >
+
+                    <small
+                    *ngIf="faleconoscoForm.get('email').errors?.required"
+                      class="text-danger d-block mt-2">
+                      Digite um email por favor.
+                    </small>
+                    <small
+                     *ngIf="faleconoscoForm.get('email').errors?.email"
+                     class="text-danger d-block mt-2">
+                     Digite um email válido por favor.
+                    </small>
+
+                 
+                    
+            </div>
+         
+  
+
+          <div class="form-group">
+            <input class="form-control" 
+                  formControlName="telefone" 
+                  placeholder="Telefone">
+                 
+                  <small
+                  *ngIf="faleconoscoForm.get('telefone').errors?.pattern"
+                    class="text-danger d-block mt-2">
+                    Somente números são permitidos.
+                  </small>
+                <small
+                *ngIf="faleconoscoForm.get('telefone').errors?.required"
+                  class="text-danger d-block mt-2">
+                  Digite um telefone por favor.
+                </small>
+          </div>
+
+          <div class="form-group">
+              <input class="form-control" 
+                    formControlName="interesse" 
+                    placeholder="Qual seu Interesse">
+                  <small
+                  *ngIf="faleconoscoForm.get('interesse').errors?.required"
+                    class="text-danger d-block mt-2">
+                    Diga-nos qual seu interesse no contato.
+                  </small>
+            </div>
+
+          <div class="form-group">
+            <textarea matInput class="form-control" formControlName="mensagem"
+                      placeholder="Deixe Sua Mensagem"></textarea>
+                    <small
+                    *ngIf="faleconoscoForm.get('mensagem').errors?.required"
+                      class="text-danger d-block mt-2">
+                      Digite uma breve descrição do que podemos fazer por você.
+                    </small>
+          </div>
+      
+    <button [disabled]="!faleconoscoForm.valid" type="submit" class="btn btn-primary btn-block">Enviar mensagem para FFA CONSTRUTORA</button>
+
+    <div class="col-md-12" class="botaovoltar">
+        <button type="submit" [routerLink]="['/principal']" routerLinkActive="router-link-active" class="btn btn-secondary">
+          Voltar para pagina principal
+        </button>
+     </div> 
+
+  </form>
+   
+  
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container"  *ngFor="let list of documentos">
+  <div class="card formato">  
+      <h5 class="card-header ">Documento : </h5>
+      <a href="{{localdocs}}{{list.nomedocumento}}">
+        <div class="row">
+         
+          <div class="col-md-2 col-sm-12" style="text-align:center">
+              <img src="../../assets/fileicons/{{list.formato}}" class="ico" >
+          </div>
+
+          <div class="col-md-10 col-sm-12" >
+              <h6 class="card-title text-danger">Data : {{list.data | date:'dd/MM/yyyy hh:mm'}}</h6>
+              <p class="card-text text-primary">Documento : {{list.titulo}} </p>
+              <p class="card-text text-secondary"> Arquivo: {{list.nomedocumento}}</p>
+
+              <p class="text-success">Descrição : {{list.descricao}}</p> 
+          </div>
+        </div>
+      </a>
+              
+  </div> 
+</div>
+    
+  

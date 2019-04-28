@@ -1,0 +1,45 @@
+.uni{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.texto{
+    margin-left: 5%;
+
+}
+.titulo{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.card{
+    width: 33rem;
+}
+
+.tam{
+    width: auto;
+    
+}
+.retangular{
+
+  
+    width: 100%;
+    height: 100%;
+
+    border-radius: 7px;
+   
+}
+
+.quadrado{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+  
+    
+}
+.divprincipal{
+    text-align: center;
+    margin-bottom: 3%;
+
+}

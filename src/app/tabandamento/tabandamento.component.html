@@ -1,0 +1,40 @@
+<div class="container tabs">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link {{abarelatorios}}" [routerLink]="" routerLinkActive="router-link-active"  (click)="clicado('relatorios')">Relatórios de Progresso</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{abafotos}} "  [routerLink]="" (click)="clicado('fotos')">Fotos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{abavideos}}"  [routerLink]="" (click)="clicado('videos')" >Vídeos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  {{abadocumentos}}" [routerLink]="" (click)="clicado('documentos')" >Documentos</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/principal" >Sair</a>
+        </li>
+     
+    </ul>
+    </div>
+    
+    
+    <ng-template [ngIf]="componente_mostrar=='fotos'"><div>
+      <app-andamentofotos></app-andamentofotos>
+    </div></ng-template>
+    
+    <ng-template [ngIf]="componente_mostrar=='videos'"><div>
+        <app-andamentovideos></app-andamentovideos>
+      </div></ng-template>
+    
+      <ng-template [ngIf]="componente_mostrar=='relatorios'"><div>
+          <app-andamentorelatorios></app-andamentorelatorios>
+        </div></ng-template>
+    
+        <ng-template [ngIf]="componente_mostrar=='documentos'"><div>
+            <app-documentos></app-documentos>
+      </div></ng-template>
+    
+    
+    

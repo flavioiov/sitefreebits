@@ -1,0 +1,62 @@
+<div class="container tabs">
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link {{abatipo}}" [routerLink]="" routerLinkActive="router-link-active"
+        (click)="clicado('Tipo')">Apartamento Tipo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {{abalazer}} " [routerLink]="" (click)="clicado('Lazer')">Área de Lazer</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {{abacobertura}}" [routerLink]="" (click)="clicado('Cobertura')">Apartamento Cobertura</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link  {{abafachada}}" [routerLink]="" (click)="clicado('Fachada')">Fachada</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {{abamapa}}" [routerLink]="" (click)="clicado('Mapa')">Mapa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {{abaprogresso}}" routerLink="/andamento">Progresso da Obra</a>
+    </li>
+  </ul>
+</div>
+
+
+<ng-template [ngIf]="componente_mostrar=='Tipo'">
+  <div>
+    <app-galeriaptipo></app-galeriaptipo>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="componente_mostrar=='Lazer'">
+  <div>
+    <app-galerialazer></app-galerialazer>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="componente_mostrar=='Cobertura'">
+  <div>
+    <app-galeriacobertura>
+
+    </app-galeriacobertura>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="componente_mostrar=='Fachada'">
+  <div>
+    <app-galeriafachada></app-galeriafachada>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="componente_mostrar=='Progresso'">
+  <div>
+    <app-andamentoobra></app-andamentoobra>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="componente_mostrar=='Mapa'">
+  <div>
+    <app-mapa></app-mapa>
+  </div>
+</ng-template>

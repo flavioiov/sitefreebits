@@ -1,0 +1,32 @@
+
+  
+<div class="container">
+
+    <div class="row">
+    
+        
+        <div *ngFor="let list of lista" class="col-md-6 col-sm-12 divprincipal">
+            
+            <div class="col-12">
+
+                <img class="retangular" src="{{localimagens}}{{list.localimg}}" [alt]="list.titulo">
+              
+            
+                  <div class="col-12" style="text-align: left">
+        
+                            <h5 class="titulo">{{list.titulo}}</h5>
+                            <p class="texto">{{list.descricao}}</p>
+                            <a  class=" texto btn btn-primary" (click)="openDialog(list.titulo,list.descricao,localimagens+list.localimg)" >Ampliar</a>
+                  </div>
+              </div> 
+          </div>
+
+      </div>
+</div>
+
+
+
+
+
+
+

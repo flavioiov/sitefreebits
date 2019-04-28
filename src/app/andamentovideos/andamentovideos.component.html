@@ -1,0 +1,27 @@
+<div class="container">
+ 
+  <div class="row">
+       
+ 
+          <div class="col-md-7 col-sm-12 alinha" *ngFor="let list of videos">
+ 
+              <figure class="col-md-12 ">
+                  <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/T5CJg2qbF_c" 
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </figure>
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">{{list.titulo}}</h5>
+                    <p>{{list.data}}</p>
+                    <p class="card-text">{{list.descricao}}</p>
+                   
+                  </div>
+               
+          </div>
+
+
+</div>
+
+ 
+
+
