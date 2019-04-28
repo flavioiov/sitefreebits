@@ -15,7 +15,7 @@ export const localarquivos='http://191.252.2.163:8080/site/';
 
 export class AppComponent {
 
-  title='FFA Construtora Lean - Caraguatatuba';
+  title='Freebits Tecnologia da Informação';
 
   constructor(
     private meta: Meta,
@@ -25,13 +25,8 @@ export class AppComponent {
    ngOnInit(){
 
     this.titleService.setTitle(this.title);
-    this.meta.addTag({ name: 'description', content: 'FFA Construtora - Caraguatatuba - SP' });
-    this.meta.addTag({ name: 'keywords', content: 'incorporadora Caraguatatuba,Imobiliário,Empreendimentos Caraguatatuba, Negócios Imobiliários, construção civil,projetos arquitetônicos, incorporação, Edifício Evora, Caraguatatuba,empreendimentos imobiliários caraguatatuba,empreendimentos imobiliários litoral norte, construtora, construtora de predios, lean construction, lean manufactoring' });
-    this.meta.addTag({name: 'robots', content: 'INDEX, FOLLOW'});
-    this.meta.addTag({ name: 'author', content: 'FreeBits Tecnologia da Informação' });
-    this.meta.addTag({charset: 'UTF-8'}); 
-    console.log(this.meta.getTags('name=description'));
-    console.log(this.meta.getTags('name=keywords'));
+    this.meta.addTag({ name: 'description', content: 'Freebits Tecnologia da Informação' });
+    
 
 
 
